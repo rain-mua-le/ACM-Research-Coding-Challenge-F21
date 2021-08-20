@@ -1,4 +1,3 @@
-from re import L
 from typing import Dict, List
 import nltk
 from nltk.corpus import wordnet as wn
