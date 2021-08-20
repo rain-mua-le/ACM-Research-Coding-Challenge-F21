@@ -32,6 +32,7 @@ The reason I used the rule-based approach was because there was not enough suffi
 
 ## To Run Solution Program
 Run `git clone https://github.com/rain-mua-le/ACM-Research-Coding-Challenge-F21.git` in the terminal, then change directories to the created folder to run these commands:
+
 `
 python -m venv venv
 
