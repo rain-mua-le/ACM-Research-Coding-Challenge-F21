@@ -6,7 +6,7 @@
 (Word: dream, Part-of-speech: RB, Negated?: False)- 1
 (Word: hour, Part-of-speech: NN, Negated?: False)- 1
 (Word: ago, Part-of-speech: IN, Negated?: False)- 1
-(Word: lay, Part-of-speech: VBD, Negated?: False)- 1
+(Word: lay, Part-of-speech: VBD, Negated?: False)- 2
 (Word: cat-nap, Part-of-speech: JJ, Negated?: False)- 1
 (Word: dream, Part-of-speech: NN, Negated?: False)- 1
 (Word: montag, Part-of-speech: NN, Negated?: False)- 2
@@ -30,9 +30,9 @@
 (Word: knowledge, Part-of-speech: NN, Negated?: False)- 2
 (Word: equivalent, Part-of-speech: JJ, Negated?: False)- 1
 (Word: force, Part-of-speech: NN, Negated?: False)- 1
-(Word: well, Part-of-speech: RB, Negated?: False)- 1
+(Word: well, Part-of-speech: RB, Negated?: False)- 4
 (Word: dr, Part-of-speech: JJ, Negated?: False)- 1
-(Word: also, Part-of-speech: RB, Negated?: False)- 1
+(Word: also, Part-of-speech: RB, Negated?: False)- 2
 (Word: dear, Part-of-speech: JJ, Negated?: False)- 1
 (Word: boy, Part-of-speech: NN, Negated?: False)- 1
 (Word: wise, Part-of-speech: NN, Negated?: True)- 1
@@ -62,7 +62,7 @@
 (Word: hid, Part-of-speech: RB, Negated?: True)- 1
 (Word: long, Part-of-speech: RB, Negated?: False)- 1
 (Word: cried, Part-of-speech: JJ, Negated?: False)- 1
-(Word: good, Part-of-speech: JJ, Negated?: False)- 1
+(Word: good, Part-of-speech: JJ, Negated?: False)- 4
 (Word: humour, Part-of-speech: NN, Negated?: False)- 1
 (Word: oh, Part-of-speech: IN, Negated?: False)- 1
 (Word: god, Part-of-speech: JJ, Negated?: False)- 1
@@ -74,7 +74,7 @@
 (Word: purpose, Part-of-speech: NN, Negated?: False)- 1
 (Word: age, Part-of-speech: NN, Negated?: False)- 1
 (Word: thinks, Part-of-speech: VBZ, Negated?: False)- 1
-(Word: better, Part-of-speech: RBR, Negated?: False)- 1
+(Word: better, Part-of-speech: RBR, Negated?: False)- 2
 (Word: gilded, Part-of-speech: JJ, Negated?: False)- 1
 (Word: fool, Part-of-speech: NN, Negated?: False)- 1
 (Word: threadbare, Part-of-speech: NN, Negated?: False)- 1
@@ -121,6 +121,7 @@
 (Word: us, Part-of-speech: PRP, Negated?: False)- 1
 (Word: mr, Part-of-speech: VBP, Negated?: False)- 1
 (Word: valery, Part-of-speech: NN, Negated?: False)- 1
+(Word: , Part-of-speech: JJ, Negated?: False)- 1
 (Word: think, Part-of-speech: NN, Negated?: False)- 1
 (Word: may, Part-of-speech: MD, Negated?: False)- 1
 (Word: like, Part-of-speech: VB, Negated?: False)- 1
@@ -133,7 +134,6 @@
 (Word: body, Part-of-speech: NN, Negated?: False)- 1
 (Word: middle, Part-of-speech: JJ, Negated?: False)- 1
 (Word: stature, Part-of-speech: NN, Negated?: False)- 1
-(Word: well, Part-of-speech: RB, Negated?: False)- 3
 (Word: set, Part-of-speech: VBN, Negated?: False)- 2
 (Word: strong, Part-of-speech: JJ, Negated?: False)- 1
 (Word: ingenious, Part-of-speech: JJ, Negated?: False)- 2
@@ -168,7 +168,6 @@
 (Word: tools, Part-of-speech: NNS, Negated?: False)- 1
 (Word: great, Part-of-speech: JJ, Negated?: False)- 1
 (Word: excellence, Part-of-speech: NN, Negated?: False)- 1
-(Word: lay, Part-of-speech: VBD, Negated?: False)- 1
 (Word: sound, Part-of-speech: JJ, Negated?: False)- 1
 (Word: understanding, Part-of-speech: JJ, Negated?: False)- 1
 (Word: solid, Part-of-speech: JJ, Negated?: False)- 1
@@ -201,11 +200,9 @@
 (Word: church, Part-of-speech: NN, Negated?: False)- 1
 (Word: belonged, Part-of-speech: VBD, Negated?: False)- 1
 (Word: showed, Part-of-speech: VBD, Negated?: False)- 1
-(Word: good, Part-of-speech: JJ, Negated?: False)- 3
 (Word: deal, Part-of-speech: NN, Negated?: False)- 1
 (Word: respect, Part-of-speech: NN, Negated?: False)- 1
 (Word: advice:, Part-of-speech: NN, Negated?: False)- 1
-(Word: also, Part-of-speech: RB, Negated?: False)- 1
 (Word: much, Part-of-speech: RB, Negated?: False)- 1
 (Word: persons, Part-of-speech: NNS, Negated?: False)- 1
 (Word: difficulty, Part-of-speech: NN, Negated?: False)- 1
@@ -276,7 +273,6 @@
 (Word: suitable, Part-of-speech: JJ, Negated?: False)- 1
 (Word: gratification, Part-of-speech: NN, Negated?: False)- 1
 (Word: delicate, Part-of-speech: NN, Negated?: False)- 1
-(Word: better, Part-of-speech: RBR, Negated?: False)- 1
 (Word: instructed, Part-of-speech: VBN, Negated?: False)- 1
 (Word: tastes, Part-of-speech: NNS, Negated?: False)- 1
 (Word: appetites, Part-of-speech: NNS, Negated?: False)- 1

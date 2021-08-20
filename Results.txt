@@ -1,4 +1,2 @@
-Block 1 is neutral with a score of 0.03894927536231884
-Block 1 is subjective with a score of 0.6331521739130435
-Block 2 is positive with a score of 0.07584269662921349
-Block 2 is subjective with a score of 0.672752808988764
+The block of text is positive with a score of 0.05954258675078864
+The block of text is objective with a score of 0.6533911671924291
