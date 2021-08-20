@@ -100,16 +100,19 @@ def scoring(bags: Bags) -> TokenScores:
         l.append(d)
     return l
 
-def results(token_scores: TokenScores) -> None:
+def results(token_scores: TokenScores, bags: Bags) -> None:
     i = 1
-    for blocks in token_scores:
+    for blocks, b in zip(token_scores, bags):
         pos_neg_score = 0
         obj_score = 0
+        num_of_tokens = 0
+        for v in b.values():
+            num_of_tokens += v
         for v in blocks.values():
             pos_neg_score += v.positive - v.negative
             obj_score += v.objective
-        pos_neg_score /= len(blocks)
-        obj_score /= len(blocks)
+        pos_neg_score /= num_of_tokens
+        obj_score /= num_of_tokens
         if pos_neg_score < -0.05:
             print("Block " + str(i) + " is negative with a score of " + str(pos_neg_score))
         elif pos_neg_score > 0.05:
@@ -128,4 +131,4 @@ if __name__ == "__main__":
     blocks = parse("input.txt", "stop_words.txt")
     bags = bag_of_words(blocks)
     token_scores = scoring(bags)
-    results(token_scores)
+    results(token_scores, bags)
