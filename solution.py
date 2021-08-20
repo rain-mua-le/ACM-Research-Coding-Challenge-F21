@@ -55,7 +55,6 @@ def bag_of_words(block: Blocks) -> Bags:
         pos = nltk.pos_tag(temp)
         for i in range(0, len(temp)):
             dummy: str = temp[i]
-            print(dummy)
             if dummy in negate:
                 continue
             b: bool = False
