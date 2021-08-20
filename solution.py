@@ -48,13 +48,16 @@ def parse(filename: str, stop_words_file: str) -> Blocks:
 
 def bag_of_words(block: Blocks) -> Bags:
     l: List = []
-    negate: List = ["not, no", "nor"]
+    negate: List[str] = ["not", "no", "nor"]
     for s in block:
         bag: Dict = {}
         temp = s.strip().split(" ")
         pos = nltk.pos_tag(temp)
         for i in range(0, len(temp)):
             dummy: str = temp[i]
+            print(dummy)
+            if dummy in negate:
+                continue
             b: bool = False
             if i > 0 and temp[i - 1] in negate:
                 b = True
@@ -116,15 +119,15 @@ def results(token_scores: TokenScores, bags: Bags) -> str:
         pos_neg_score /= num_of_tokens
         obj_score /= num_of_tokens
         if pos_neg_score < -0.05:
-            result = "Block " + str(i) + " is negative with a score of " + str(pos_neg_score) + "\n"
+            result += "Block " + str(i) + " is negative with a score of " + str(pos_neg_score) + "\n"
         elif pos_neg_score > 0.05:
-            result = "Block " + str(i) + " is positive with a score of " + str(pos_neg_score) + "\n"
+            result += "Block " + str(i) + " is positive with a score of " + str(pos_neg_score) + "\n"
         else:
-            result = "Block " + str(i) + " is neutral with a score of " + str(pos_neg_score) + "\n"
+            result += "Block " + str(i) + " is neutral with a score of " + str(pos_neg_score) + "\n"
         if obj_score < 0.45:
-            result += "Block " + str(i) + " is objective with a score of " + str(obj_score)
+            result += "Block " + str(i) + " is objective with a score of " + str(obj_score) + "\n"
         elif obj_score > 0.55:
-            result += "Block " + str(i) + " is subjective with a score of " + str(obj_score)
+            result += "Block " + str(i) + " is subjective with a score of " + str(obj_score) + "\n"
         else:
             result += "Block " + str(i) + " is neither objective nor subjective with a score of " + str(obj_score)
         i += 1

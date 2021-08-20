@@ -1,9 +1,8 @@
 (Word: stop, Part-of-speech: VB, Negated?: False)- 1
 (Word: blushing, Part-of-speech: NN, Negated?: False)- 1
-(Word: not, Part-of-speech: RB, Negated?: False)- 3
-(Word: needling, Part-of-speech: VBG, Negated?: False)- 1
+(Word: needling, Part-of-speech: VBG, Negated?: True)- 1
 (Word: really, Part-of-speech: RB, Negated?: False)- 1
-(Word: know, Part-of-speech: VB, Negated?: False)- 1
+(Word: know, Part-of-speech: VB, Negated?: True)- 1
 (Word: dream, Part-of-speech: RB, Negated?: False)- 1
 (Word: hour, Part-of-speech: NN, Negated?: False)- 1
 (Word: ago, Part-of-speech: IN, Negated?: False)- 1
@@ -36,8 +35,7 @@
 (Word: also, Part-of-speech: RB, Negated?: False)- 1
 (Word: dear, Part-of-speech: JJ, Negated?: False)- 1
 (Word: boy, Part-of-speech: NN, Negated?: False)- 1
-(Word: no, Part-of-speech: DT, Negated?: False)- 1
-(Word: wise, Part-of-speech: NN, Negated?: False)- 1
+(Word: wise, Part-of-speech: NN, Negated?: True)- 1
 (Word: man, Part-of-speech: NN, Negated?: False)- 1
 (Word: quit, Part-of-speech: VBD, Negated?: False)- 1
 (Word: certainty, Part-of-speech: JJ, Negated?: False)- 1
@@ -61,7 +59,7 @@
 (Word: come, Part-of-speech: VB, Negated?: False)- 1
 (Word: light, Part-of-speech: JJ, Negated?: False)- 1
 (Word: murder, Part-of-speech: NN, Negated?: False)- 1
-(Word: hid, Part-of-speech: RB, Negated?: False)- 1
+(Word: hid, Part-of-speech: RB, Negated?: True)- 1
 (Word: long, Part-of-speech: RB, Negated?: False)- 1
 (Word: cried, Part-of-speech: JJ, Negated?: False)- 1
 (Word: good, Part-of-speech: JJ, Negated?: False)- 1
@@ -241,8 +239,7 @@
 (Word: prudent, Part-of-speech: NN, Negated?: False)- 1
 (Word: conduct, Part-of-speech: NN, Negated?: False)- 1
 (Word: life, Part-of-speech: NN, Negated?: False)- 1
-(Word: no, Part-of-speech: DT, Negated?: False)- 1
-(Word: notice, Part-of-speech: NN, Negated?: False)- 1
+(Word: notice, Part-of-speech: NN, Negated?: True)- 1
 (Word: ever, Part-of-speech: RB, Negated?: False)- 1
 (Word: taken, Part-of-speech: VBN, Negated?: False)- 1
 (Word: related, Part-of-speech: JJ, Negated?: False)- 1
