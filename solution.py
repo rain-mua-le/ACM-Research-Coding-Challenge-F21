@@ -13,7 +13,7 @@ class Token:
         self.pos = pos
         self.is_negated = is_negated
     def __str__(self) -> str:
-        return "Word: " + self.word + ", Part-of-speech: " + self.pos + ", Negated?: " + str(self.is_negated)
+        return "(Word: " + self.word + ", Part-of-speech: " + self.pos + ", Negated?: " + str(self.is_negated) + ")"
     def __hash__(self) -> int:
         return hash((self.word, self.pos, self.is_negated))
     def __eq__(self, o: object) -> bool:
@@ -25,7 +25,7 @@ class Scores:
         self.negative = negative
         self.objective = objective
     def __str__(self) -> str:
-        return "Positive Score: " + str(self.positive) + ", Negative Score: " + str(self.negative) + ", Objective Score: " + str(self.objective)
+        return "(Positive Score: " + str(self.positive) + ", Negative Score: " + str(self.negative) + ", Objective Score: " + str(self.objective) + ")"
 
 Blocks = List[str]
 Bags = List[Dict[Token, int]]
@@ -34,6 +34,7 @@ TokenScores = List[Dict[Token, Scores]]
 def parse(filename: str, stop_words_file: str) -> Blocks:
     f = open(filename, "r")
     raw_text: str = f.read()
+    f.close()
     #Make it lowercase and remove newlines, extra spaces, and punctuations and parse text into blocks
     l: List[str] = [str(s.strip().lower().replace("\n", " ").replace("  ", " ").replace("\'", "").replace("\"", "").replace("`", "").replace(".", "").replace("?", "").replace("!", "").replace(";", "").replace(",", "")) for s in raw_text.strip().split("\n\n")]
     #Remove stop words from blocks
@@ -100,7 +101,8 @@ def scoring(bags: Bags) -> TokenScores:
         l.append(d)
     return l
 
-def results(token_scores: TokenScores, bags: Bags) -> None:
+def results(token_scores: TokenScores, bags: Bags) -> str:
+    result: str = ""
     i = 1
     for blocks, b in zip(token_scores, bags):
         pos_neg_score = 0
@@ -114,21 +116,39 @@ def results(token_scores: TokenScores, bags: Bags) -> None:
         pos_neg_score /= num_of_tokens
         obj_score /= num_of_tokens
         if pos_neg_score < -0.05:
-            print("Block " + str(i) + " is negative with a score of " + str(pos_neg_score))
+            result = "Block " + str(i) + " is negative with a score of " + str(pos_neg_score) + "\n"
         elif pos_neg_score > 0.05:
-            print("Block " + str(i) + " is positive with a score of " + str(pos_neg_score))
+            result = "Block " + str(i) + " is positive with a score of " + str(pos_neg_score) + "\n"
         else:
-            print("Block " + str(i) + " is neutral with a score of " + str(pos_neg_score))
+            result = "Block " + str(i) + " is neutral with a score of " + str(pos_neg_score) + "\n"
         if obj_score < 0.45:
-            print("Block " + str(i) + " is objective with a score of " + str(obj_score))
+            result += "Block " + str(i) + " is objective with a score of " + str(obj_score)
         elif obj_score > 0.55:
-            print("Block " + str(i) + " is subjective with a score of " + str(obj_score))
+            result += "Block " + str(i) + " is subjective with a score of " + str(obj_score)
         else:
-            print("Block " + str(i) + " is neither objective nor subjective with a score of " + str(obj_score))
+            result += "Block " + str(i) + " is neither objective nor subjective with a score of " + str(obj_score)
         i += 1
+    return result
 
 if __name__ == "__main__":
     blocks = parse("input.txt", "stop_words.txt")
+    file_blocks = open("Blocks.txt", "w")
+    for block in blocks:
+        file_blocks.write(block + "\n")
+    file_blocks.close()
     bags = bag_of_words(blocks)
+    file_bags = open("Bags.txt", "w")
+    for block in bags:
+        for k, v in block.items():
+            file_bags.write(str(k) + "- " + str(v) + "\n")
+    file_bags.close()
     token_scores = scoring(bags)
-    results(token_scores, bags)
+    file_token_scores = open("TokenScores.txt", "w")
+    for block in token_scores:
+        for k, v in block.items():
+            file_token_scores.write(str(k) + "- " + str(v) + "\n")
+    file_token_scores.close()
+    result = results(token_scores, bags)
+    file_results = open("Results.txt", "w")
+    file_results.write(result)
+    file_results.close()

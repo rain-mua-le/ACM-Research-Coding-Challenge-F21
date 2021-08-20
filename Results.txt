@@ -1,0 +1,2 @@
+Block 2 is positive with a score of 0.07541899441340782
+Block 2 is subjective with a score of 0.6689944134078212
